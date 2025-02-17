@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proinsure - Fixed Header</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 1em;
+        }
+
+        .view-plans {
+            padding: 10px 15px;
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        .view-plans:hover {
+            background: black;
+            color: white;
+        }
+
+        /* Content Section */
+        main {
+            padding-top: 80px; /* Ensures content is not hidden behind navbar */
+        }
+
+        /* First Section */
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #25213B;
+            color: white;
+            padding: 60px;
+        }
+
+        .left {
+            width: 50%;
+        }
+
+        .left h1 {
+            font-size: 2.5em;
+        }
+
+        .left p {
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+
+        .button {
+            padding: 10px 15px;
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        .right {
+            width: 50%;
+            text-align: center;
+        }
+
+        .right img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* About Section */
+        .about {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .about img {
+            max-width: 80%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Proinsure</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="view-plans">View Plans</a>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <div class="left">
+                <h1>Humanizing Your Insurance</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Consequatur explicabo temporibus alias magni distinctio sunt unde 
+                architecto ipsum dicta, praesentium amet est dolore.</p>
+                <a href="#" class="button">View Plans</a>
+            </div>
+            <div class="right">
+                <img src="https://altcampus.github.io/proinsure/assets/media/01.png" alt="Insurance Image">
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About the Insure</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img src="https://altcampus.github.io/proinsure/assets/media/02.png" alt="About Insurance">
+        </section>
+    </main>
+
+</body>
+</html>
