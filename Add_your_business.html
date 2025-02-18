@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #777;
+        }
+        .input-group {
+            display: flex;
+            margin-top: 20px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        .input-group button {
+            background-color: #de0909e7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+        .input-group button:hover {
+            background-color: #e04848;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>DO YOU WANT TO ADD YOUR BUSINESS LISTING WITH US?</h2>
+        <p>Listrace offers you to list your business with us, and we are very much able to promote your business.</p>
+        
+        <form id="businessForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Enter your email here" required>
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("businessForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+            if(email) {
+                alert("Account created for: " + email);
+                // Here you can add an API call or form submission logic
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+    </script>
+
+</body>
+</html>
