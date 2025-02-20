@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chania Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .header, .footer {
+            background: #777;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            clear: both;
+        }
+
+        .sidebar {
+            width: 25%;
+            float: left;
+            background: #33b5e5;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .sidebar a:hover {
+            background: #0088cc;
+        }
+
+        .content {
+            width: 75%;
+            float: left;
+            padding: 20px;
+            height: 300px;
+            overflow-y: scroll;
+            background: #f8f8f8;
+        }
+
+        .content h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function changeContent(title, text) {
+            if (title === 'The Food') {
+                text = '<br><br><h3>Delicious Foods From Around the World</h3>' +
+                    '<table>' +
+                        '<tr><th>Food</th><th>Country</th></tr>' +
+                    '<tr><td>Tandoori Chicken</td><td>India</td></tr>' +
+                    '<tr><td>Peking Duck</td><td>China</td></tr>' +
+                    '<tr><td>Pizza</td><td>Italy</td></tr>' +
+                    '<tr><td>Italian Food</td><td>Italy</td></tr>' +
+                    '<tr><td>Chicken Kiev</td><td>Ukraine</td></tr>' +
+                    '</table>';
+            }
+            document.getElementById("content-title").innerText = title;
+            document.getElementById("content-text").innerHTML = text;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Chania</div>
+        <div class="sidebar">
+            <a onclick="changeContent('The Flight', 'Details about the flight to Chania.')">The Flight</a>
+            <a onclick="changeContent('The City', 'Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.')">The City</a>
+            <a onclick="changeContent('The Island', 'Information about the island and its beautiful landscapes.')">The Island</a>
+            <a onclick="changeContent('The Food', '')">The Food</a>
+        </div>
+        <div class="content">
+            <h2 id="content-title">The City</h2>
+            <p id="content-text"><br>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+        </div>
+        <div class="footer">Footer Text</div>
+    </div>
+</body>
+</html>
