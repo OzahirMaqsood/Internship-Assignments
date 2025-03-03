@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>   
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,6 +46,11 @@
             text-decoration: none;
             color: black;
             font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: blue;
         }
 
         .view-plans {
@@ -53,12 +58,12 @@
             border: 2px solid black;
             text-decoration: none;
             color: black;
-            font-size: 1em;
+            font-size: 20px;
             transition: 0.3s;
         }
 
         .view-plans:hover {
-            background: black;
+            background:#25213B;
             color: white;
         }
 
@@ -74,7 +79,7 @@
             justify-content: space-between;
             background: #25213B;
             color: white;
-            padding: 60px;
+            padding: 40px;
         }
 
         .left {
@@ -97,6 +102,7 @@
             color: white;
             font-size: 1em;
             display: inline-block;
+            transition: 0.3s;
         }
 
         .button:hover {
@@ -106,7 +112,7 @@
 
         .right {
             width: 50%;
-            text-align: center;
+            text-align: right;
         }
 
         .right img {
@@ -116,9 +122,21 @@
 
         /* About Section */
         .about {
-            text-align: center;
-            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
             background: white;
+            color: black;
+        }
+
+        .about .left {
+            width: 50%;
+        }
+
+        .about .right {
+            width: 50%;
+            padding-left: 20px;
         }
 
         .about h2 {
@@ -132,10 +150,66 @@
         }
 
         .about img {
-            max-width: 80%;
+            max-width: 100%;
             height: auto;
         }
 
+        /* Know More Button */
+        .know-more {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid #25213B;
+            text-decoration: none;
+            color: #25213B;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        .know-more:hover {
+            background: #25213B;
+            color: white;
+        }
+
+        /* We Are Different Section */
+        .underline {
+            width: 200px;
+            height: 2px;
+            background-color: grey;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px;
+            text-align: left;
+            padding: 60px 20px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .feature {
+            width: 30%;
+        }
+        .icon {
+            width: 48px;
+            height: 48px;
+            background: #3498db;
+            border-radius: 100%;
+            margin: 10px;
+        }
+        h2 {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #767070d6;
+        }
     </style>
 </head>
 <body>
@@ -169,10 +243,41 @@
         </section>
 
         <section class="about">
-            <h2>About the Insure</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <img src="https://altcampus.github.io/proinsure/assets/media/02.png" alt="About Insurance">
+            <div class="left">
+                <img src="https://altcampus.github.io/proinsure/assets/media/02.png" alt="About Insurance">
+            </div>
+            <div class="right">
+                <h2>About the Insure</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio rem sequi, fuga laboriosam maiores voluptatum in ducimus ipsum animi placeat labore!</p>
+                <a href="#" class="know-more">Know More</a>
+            </div>
         </section>
+
+        <!-- We Are Different Section -->
+        <div class="container">
+            <div class="underline"></div>
+
+            <div class="left">
+                <h1>We are different</h1>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="icon"></div>
+                    <h2>Easy Process</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae et provident commodi atque fugiat sequi ex unde dolores.</p>
+                </div>
+                <div class="feature">
+                    <div class="icon"></div>
+                    <h2>Affordable Price</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae et provident commodi atque fugiat sequi ex unde dolores.</p>
+                </div>
+                <div class="feature">
+                    <div class="icon"></div>
+                    <h2>You Come First</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae et provident commodi atque fugiat sequi ex unde dolores.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
 </body>
