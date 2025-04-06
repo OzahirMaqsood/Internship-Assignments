@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filter Positive Numbers from Array</title>
+</head>
+<body>
+  <h2>Positive Numbers from Array</h2>
+  <p id="result"></p>
+
+  <script>
+    // Function to return only positive numbers from an array
+    function getPositiveNumbers(arr) {
+      const positiveNumbers = [];
+
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+          positiveNumbers.push(arr[i]);
+        }
+      }
+
+      return positiveNumbers;
+    }
+
+    // Array with 10 elements (including at least 4 negative numbers)
+    const numbers = [12, -5, 8, -3, 25, 0, -11, 19, 4, -7];
+
+    // Call the function
+    const positives = getPositiveNumbers(numbers);
+
+    // Display the result
+    document.getElementById("result").textContent = `Positive numbers: ${positives.join(', ')}`;
+  </script>
+</body>
+</html>

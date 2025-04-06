@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odd Numbers Less Than 100</title>
+</head>
+<body>
+  <h2>Odd Numbers Less Than 100:</h2>
+  <div id="output"></div>
+
+  <script>
+    // Get the output container
+    const outputDiv = document.getElementById("output");
+
+    // Loop through numbers from 1 to 99
+    for (let i = 1; i < 100; i += 2) {
+      // Create a paragraph for each odd number
+      const para = document.createElement("p");
+      para.textContent = i;
+      outputDiv.appendChild(para);
+    }
+  </script>
+</body>
+</html>

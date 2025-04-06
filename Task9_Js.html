@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average of Array Elements</title>
+</head>
+<body>
+  <h2>Average of Numbers in an Array</h2>
+  <p id="result"></p>
+
+  <script>
+    // Define an array with at least 8 numbers
+    const numbers = [10, 20, 30, 40, 50, 60, 70, 80];
+
+    let sum = 0;
+
+    // Loop through the array to calculate the sum
+    for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+
+    // Calculate average
+    const average = sum / numbers.length;
+
+    // Display the result
+    document.getElementById("result").textContent = `The average is: ${average}`;
+  </script>
+</body>
+</html>

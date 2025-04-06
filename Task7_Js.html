@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Odd Numbers (11 to 29)</title>
+</head>
+<body>
+  <h2>Sum of Odd Numbers Greater Than 10 and Less Than 30</h2>
+  <p id="result"></p>
+
+  <script>
+    let sum = 0;
+
+    // Loop through numbers from 11 to 29
+    for (let i = 11; i < 30; i += 2) {
+      sum += i;
+    }
+
+    // Display the result
+    document.getElementById("result").textContent = `The sum is: ${sum}`;
+  </script>
+</body>
+</html>

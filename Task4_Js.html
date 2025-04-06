@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Tables from 2 to 10</title>
+</head>
+<body>
+  <h2>Multiplication Tables (2 to 10):</h2>
+  <div id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    // Outer loop for numbers from 2 to 10
+    for (let num = 2; num <= 10; num++) {
+      // Create a heading for each table
+      const heading = document.createElement("h3");
+      heading.textContent = `Table of ${num}`;
+      outputDiv.appendChild(heading);
+
+      // Inner loop for multiplying 1 to 10
+      for (let i = 1; i <= 10; i++) {
+        const line = document.createElement("p");
+        line.textContent = `${num} × ${i} = ${num * i}`;
+        outputDiv.appendChild(line);
+      }
+
+      // Add a horizontal line after each table
+      const hr = document.createElement("hr");
+      outputDiv.appendChild(hr);
+    }
+  </script>
+</body>
+</html>

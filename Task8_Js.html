@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Array Elements</title>
+</head>
+<body>
+  <h2>Sum of Numbers in an Array</h2>
+  <p id="result"></p>
+
+  <script>
+    // Define an array with at least 8 numbers
+    const numbers = [5, 10, 15, 20, 25, 30, 35, 40];
+
+    let sum = 0;
+
+    // Loop through the array and calculate the sum
+    for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+
+    // Display the result
+    document.getElementById("result").textContent = `The sum of the array elements is: ${sum}`;
+  </script>
+</body>
+</html>

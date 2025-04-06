@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table of 7</title>
+</head>
+<body>
+  <h2>Multiplication Table of 7:</h2>
+  <div id="output"></div>
+
+  <script>
+    // Get the div to show the table
+    const outputDiv = document.getElementById("output");
+
+    // Loop from 1 to 100 for table of 7
+    for (let i = 1; i <= 100; i++) {
+      const result = 7 * i;
+
+      // Create and add each line to the page
+      const para = document.createElement("p");
+      para.textContent = `7 × ${i} = ${result}`;
+      outputDiv.appendChild(para);
+    }
+  </script>
+</body>
+</html>

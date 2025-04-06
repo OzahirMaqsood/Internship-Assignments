@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Numbers 1 to 10</title>
+</head>
+<body>
+  <h2>Numbers from 1 to 10:</h2>
+  <div id="output"></div>
+
+  <script>
+    // Get the div where we want to display the numbers
+    const outputDiv = document.getElementById("output");
+
+    // Loop from 1 to 10
+    for (let i = 1; i <= 10; i++) {
+      // Create a new paragraph element
+      const para = document.createElement("p");
+      // Set the text of the paragraph to the number
+      para.textContent = i;
+      // Add the paragraph to the output div
+      outputDiv.appendChild(para);
+    }
+  </script>
+</body>
+</html>
