@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body id="main">
+
+<h1>Change background color</h1>
+<button onclick="changeColor()">Click to change color of background</button>
+
+<script>
+  const colors = ["red", "blue", "green", "yellow", "orange", "pink"];
+  let currentIndex = 0;
+
+  function changeColor() {
+    let body = document.getElementById("main");
+    body.style.backgroundColor = colors[currentIndex];
+    currentIndex = (currentIndex + 1) % colors.length; // Loop back to 0 after the last color
+  }
+</script>
+
+</body>
+</html>
